@@ -2,7 +2,12 @@
 
 @section('content')
     <div class="container">
-        <h1 class="py-3">Tabella dei fumetti</h1>
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="py-3">Tabella dei fumetti</h1>
+            <div>
+                <a class="btn btn-primary" href="{{ route('comics.create') }}">Aggiungi un fumetto</a>
+            </div>
+        </div>
 
         <table class="table table-hover">
             <thead>
