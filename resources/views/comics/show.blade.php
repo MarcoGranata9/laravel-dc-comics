@@ -5,7 +5,7 @@
     <div class="d-flex justify-content-around align-items-center">
       <h1 class="py-2">Singolo fumetto</h1>
       <div class="d-flex">
-        <a class="btn btn-warning me-3" href="{{ route('comics.edit', ['comic' => $comic->id]) }}">Modifica</a>
+        <a class="btn btn-warning me-3" href="{{ route('comics.edit', ['comic' => $comic->id]) }}"><i class="fa-solid fa-pen-to-square"></i></a>
         @include('modals.delete')
       </div>
     </div>

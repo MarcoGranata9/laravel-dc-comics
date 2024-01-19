@@ -1,6 +1,6 @@
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete-modal{{$comic->id}}">
-    Cancella
+    <i class="fa-solid fa-trash"></i>
   </button>
 
   <!-- Modal -->

@@ -5,7 +5,7 @@
         <div class="d-flex justify-content-between align-items-center">
             <h1 class="py-3">Tabella dei fumetti</h1>
             <div>
-                <a class="btn btn-info" href="{{ route('comics.create') }}">Aggiungi un fumetto</a>
+                <a class="btn btn-info" href="{{ route('comics.create') }}">Aggiungi un fumetto <i class="fa-solid fa-plus"></i></a>
             </div>
         </div>
 
@@ -41,8 +41,8 @@
                   <td>{{ $comic->sale_date }}</td>
                   <td>{{ $comic->type }}</td>
                   <td class="align-bottom">
-                    <a class="btn btn-primary mb-3" href="{{ route('comics.show', ['comic' => $comic->id]) }}">Dettagli</a>
-                    <a class="btn btn-warning mb-3" href="{{ route('comics.edit', ['comic' => $comic->id]) }}">Modifica</a>
+                    <a class="btn btn-primary mb-3" href="{{ route('comics.show', ['comic' => $comic->id]) }}"><i class="fa-solid fa-circle-info"></i></a>
+                    <a class="btn btn-warning mb-3" href="{{ route('comics.edit', ['comic' => $comic->id]) }}"><i class="fa-solid fa-pen-to-square"></i></a>
                     @include('modals.delete')    
                   </td>
                 </tr>                    
