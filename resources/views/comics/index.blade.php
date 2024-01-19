@@ -9,6 +9,12 @@
             </div>
         </div>
 
+        @if (Session::has('message'))
+            <div class="alert alert-success">
+              {{ Session::get('message') }}
+            </div>
+        @endif
+
         <table class="table table-hover">
             <thead>
               <tr>

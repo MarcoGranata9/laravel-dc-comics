@@ -9,6 +9,13 @@
         @include('modals.delete')
       </div>
     </div>
+
+    @if (Session::has('message'))
+      <div class="alert alert-success">
+        {{ Session::get('message') }}
+      </div>
+    @endif
+
     <div class="row justify-content-center py-4">
         <div class="col-4 ">
             <div class="card">
