@@ -2,7 +2,12 @@
 
 @section('content')
 <div class="container">
-    <h1 class="py-2">Singolo fumetto</h1>
+    <div class="d-flex justify-content-around align-items-center">
+      <h1 class="py-2">Singolo fumetto</h1>
+      <div>
+        <a class="btn btn-warning" href="{{ route('comics.edit', ['comic' => $comic->id]) }}">Modifica</a>
+      </div>
+    </div>
     <div class="row justify-content-center py-4">
         <div class="col-4 ">
             <div class="card">

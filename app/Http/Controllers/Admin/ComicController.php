@@ -88,7 +88,11 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $form_data = $request->all();
+        $comic_update = Comic::findOrFail($id);
+
+        $comic_update->update($form_data);
+        return redirect()->route('comics.show', ['comic'=> $comic_update->id]);
     }
 
     /**
@@ -99,6 +103,9 @@ class ComicController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $comic = Comic::FindOrFail($id);
+        $comic->delete();
+
+        return redirect()->route('comics.index');
     }
 }
