@@ -37,11 +37,7 @@
                   <td class="align-bottom">
                     <a class="btn btn-primary mb-3" href="{{ route('comics.show', ['comic' => $comic->id]) }}">Dettagli</a>
                     <a class="btn btn-warning mb-3" href="{{ route('comics.edit', ['comic' => $comic->id]) }}">Modifica</a>
-                    <form action="{{ route('comics.destroy', ['comic'=> $comic->id]) }}" method="POST">
-                      @csrf
-                      @method('DELETE')
-                      <button type="submit" class="btn btn-danger">Cancella</button>
-                    </form>
+                    @include('modals.delete')    
                   </td>
                 </tr>                    
                 @endforeach

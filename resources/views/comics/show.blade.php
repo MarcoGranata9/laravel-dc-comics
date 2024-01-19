@@ -4,8 +4,9 @@
 <div class="container">
     <div class="d-flex justify-content-around align-items-center">
       <h1 class="py-2">Singolo fumetto</h1>
-      <div>
-        <a class="btn btn-warning" href="{{ route('comics.edit', ['comic' => $comic->id]) }}">Modifica</a>
+      <div class="d-flex">
+        <a class="btn btn-warning me-3" href="{{ route('comics.edit', ['comic' => $comic->id]) }}">Modifica</a>
+        @include('modals.delete')
       </div>
     </div>
     <div class="row justify-content-center py-4">
