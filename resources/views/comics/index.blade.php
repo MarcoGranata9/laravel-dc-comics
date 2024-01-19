@@ -5,7 +5,7 @@
         <div class="d-flex justify-content-between align-items-center">
             <h1 class="py-3">Tabella dei fumetti</h1>
             <div>
-                <a class="btn btn-primary" href="{{ route('comics.create') }}">Aggiungi un fumetto</a>
+                <a class="btn btn-info" href="{{ route('comics.create') }}">Aggiungi un fumetto</a>
             </div>
         </div>
 
@@ -20,6 +20,7 @@
                 <th scope="col">Serie</th>
                 <th scope="col">Data</th>
                 <th scope="col">Tipo</th>
+                <th scope="col">Azioni</th>
               </tr>
             </thead>
             <tbody>
@@ -33,7 +34,11 @@
                   <td>{{ $comic->series }}</td>
                   <td>{{ $comic->sale_date }}</td>
                   <td>{{ $comic->type }}</td>
-                  <td class="align-bottom"><a class="btn btn-info" href="{{ route('comics.show', ['comic' => $comic->id]) }}">Dettagli</a></td>
+                  <td class="align-bottom">
+                    <a class="btn btn-primary mb-3" href="{{ route('comics.show', ['comic' => $comic->id]) }}">Dettagli</a>
+                    <a class="btn btn-warning mb-3" href="{{ route('comics.edit', ['comic' => $comic->id]) }}">Modifica</a>
+                    <a class="btn btn-danger mb-3" href="{{ route('comics.show', ['comic' => $comic->id]) }}">Cancella</a>
+                  </td>
                 </tr>                    
                 @endforeach
             </tbody>
