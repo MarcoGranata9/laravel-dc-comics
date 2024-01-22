@@ -43,11 +43,16 @@
                   <td class="align-bottom">
                     <a class="btn btn-primary mb-3" href="{{ route('comics.show', ['comic' => $comic->id]) }}"><i class="fa-solid fa-circle-info"></i></a>
                     <a class="btn btn-warning mb-3" href="{{ route('comics.edit', ['comic' => $comic->id]) }}"><i class="fa-solid fa-pen-to-square"></i></a>
-                    @include('modals.delete')    
+                    <form action="{{ route('comics.destroy', ['comic'=> $comic->id]) }}" method="POST">
+                      @csrf
+                      @method('DELETE')
+                      <button type="submit" class="btn btn-danger delete-btn" data-title="{{ $comic->title }}"><i class="fa-solid fa-trash"></i></button>
+                    </form> 
                   </td>
                 </tr>                    
                 @endforeach
-            </tbody>
-          </table>
+              </tbody>
+            </table>
+            @include('modals.delete')    
     </div>
 @endsection
